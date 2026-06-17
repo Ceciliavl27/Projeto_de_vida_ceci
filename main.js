@@ -15,10 +15,10 @@ textos[i].classList.add("ativo");
 }
 
 // Datas dos objetivos
-const tempoObjetivo1 = new Date("2026-12-20T00:00:00");
-const tempoObjetivo2 = new Date("2026-07-15T00:00:00");
-const tempoObjetivo3 = new Date("2026-08-27T00:00:00");
-const tempoObjetivo4 = new Date("2027-06-14T00:00:00");
+const tempoObjetivo1 = new Date("2026-12-20T00:00:00"); // Me formar
+const tempoObjetivo2 = new Date("2026-07-15T00:00:00"); // Viajar
+const tempoObjetivo3 = new Date("2026-08-27T00:00:00"); // Aniversário
+const tempoObjetivo4 = new Date("2027-06-14T00:00:00"); // Festa
 
 const tempos = [
 tempoObjetivo1,
@@ -48,20 +48,18 @@ return [0, 0, 0, 0];
 }
 
 function atualizaCronometro() {
-document.getElementById("dias0").textContent =
-calculaTempo(tempos[0])[0];
-
-document.getElementById("horas0").textContent =
-calculaTempo(tempos[0])[1];
-
-document.getElementById("min0").textContent =
-calculaTempo(tempos[0])[2];
-
-document.getElementById("seg0").textContent =
-calculaTempo(tempos[0])[3];
-
 for (let i = 0; i < contadores.length; i++) {
-// contadores[i].textContent = calculaTempo(tempos[i]);
+document.getElementById("dias" + i).textContent =
+calculaTempo(tempos[i])[0];
+
+document.getElementById("horas" + i).textContent =
+calculaTempo(tempos[i])[1];
+
+document.getElementById("min" + i).textContent =
+calculaTempo(tempos[i])[2];
+
+document.getElementById("seg" + i).textContent =
+calculaTempo(tempos[i])[3];
 }
 }
 
